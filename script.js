@@ -4,6 +4,31 @@ controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull’esito del controllo.
 Non è necessario provvedere alla validazione delle email.
 */
+// creo un array di emails
+const emails = [
+    'gandhi@gmail.it'
+    'silvio@berlusconi.com'
+    'gabibbo@gmail.com'
+]
+let isEmailInList
+// chiedo all'utente la sua email
+const userEmail = prompt("Inserisci la tua email");
+// ciclo sull'array di emails, per ogni email:
+// SE emil ciclata = email utente, interrompo il ciclo
+for(let i = 0; i < emails.length; i++) {
+    const currentEmail = emails [i];
+    if(currentEmail === userEmail) {
+        isEmailInList = true;
+    }
+}
+// SE l'email è stata trovata
+if(isEmailInList) {
+    // utente entra
+    alert('Benvenuto nel sistema')
+} else { 
+    //utente non entra
+    alert('Non puoi entrare')
+}
 
 
 /*
